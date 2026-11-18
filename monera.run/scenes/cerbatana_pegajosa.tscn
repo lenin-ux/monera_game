@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b3go8pkdhaare"]
+
+[ext_resource type="Script" uid="uid://jvpox5u4g2ij" path="res://scripts/WeaponBase.gd" id="1_1tibc"]
+[ext_resource type="Texture2D" uid="uid://ctwokxg632mso" path="res://assets/sprites/armas/cervatana_pegajosa.png" id="2_0gow4"]
+
+[node name="CerbatanaPegajosa" type="Node2D" unique_id=1455164463]
+script = ExtResource("1_1tibc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=578227410]
+position = Vector2(117, 0)
+texture = ExtResource("2_0gow4")
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=1041269216]
+position = Vector2(425, 0)

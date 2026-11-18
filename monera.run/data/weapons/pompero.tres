@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="WeaponDef" format=3 uid="uid://be3dslbejfu8k"]
+
+[ext_resource type="PackedScene" uid="uid://7e8wk3a6807p" path="res://scenes/Burbuja.tscn" id="1_i8cy5"]
+[ext_resource type="Script" uid="uid://dc3m41j5a7b4p" path="res://scripts/resources/WeaponDef.gd" id="2_wod7i"]
+[ext_resource type="PackedScene" uid="uid://dm03ai1daa5tm" path="res://scenes/Pompero.tscn" id="3_5d4je"]
+
+[resource]
+script = ExtResource("2_wod7i")
+id = &"pompero"
+display_name = "Pompero"
+weapon_scene = ExtResource("3_5d4je")
+projectile_scene = ExtResource("1_i8cy5")
+damage = 35
+fire_interval = 1.5
+projectile_speed = 2500.0

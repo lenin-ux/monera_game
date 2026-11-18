@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bse38gup5qp2l"]
+
+[ext_resource type="Script" uid="uid://cbyuvasfhn06p" path="res://scripts/Shotgun.gd" id="1_4wnha"]
+[ext_resource type="Texture2D" uid="uid://bntgkqjfwx3nl" path="res://assets/sprites/armas/escopeta.png" id="2_4wnha"]
+
+[node name="Escopeta" type="Node2D" unique_id=710272114]
+script = ExtResource("1_4wnha")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1639953003]
+position = Vector2(227, 157)
+texture = ExtResource("2_4wnha")
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=892174116]
+position = Vector2(829, 0)

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bfxluq2ajq4uh"]
+
+[ext_resource type="Script" uid="uid://dfgnhack0315d" path="res://scripts/Projectile.gd" id="1_u4hwb"]
+[ext_resource type="Texture2D" uid="uid://br6ykyck1tlfa" path="res://assets/sprites/armas/cubo_pegajoso.png" id="2_g7ip1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0gow4"]
+size = Vector2(249.26727, 316.64798)
+
+[node name="CuboPegajoso" type="Area2D" unique_id=2029014989]
+script = ExtResource("1_u4hwb")
+use_lifetime = false
+use_max_range = false
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1796630489]
+texture = ExtResource("2_g7ip1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1335538482]
+position = Vector2(-6.207801, 1.0910101)
+rotation = -0.122173056
+shape = SubResource("RectangleShape2D_0gow4")
+
+[node name="ShapeCast2D" type="ShapeCast2D" parent="." unique_id=1572541181]

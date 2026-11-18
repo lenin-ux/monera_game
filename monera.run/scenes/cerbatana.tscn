@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dlkl8rf0wfy3g"]
+
+[ext_resource type="Script" uid="uid://jvpox5u4g2ij" path="res://scripts/WeaponBase.gd" id="1_cqpnf"]
+[ext_resource type="Texture2D" uid="uid://ouw7lsbwsjqu" path="res://assets/sprites/armas/cervatana.png" id="2_6usnk"]
+
+[node name="Cerbatana" type="Node2D" unique_id=1177750401]
+script = ExtResource("1_cqpnf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2006117745]
+position = Vector2(117, 0)
+texture = ExtResource("2_6usnk")
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=1419649285]
+position = Vector2(425, 0)

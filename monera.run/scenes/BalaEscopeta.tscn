@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://njbp6y6dpw3i"]
+
+[ext_resource type="Script" uid="uid://dfgnhack0315d" path="res://scripts/Projectile.gd" id="1_k4f0h"]
+[ext_resource type="Texture2D" uid="uid://7mjlht4ntnod" path="res://assets/sprites/armas/perdigon.png" id="2_4j4y0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o3mhk"]
+radius = 112.11155
+
+[node name="BalaEscopeta" type="Area2D" unique_id=2114710166]
+collision_layer = 2
+script = ExtResource("1_k4f0h")
+use_lifetime = false
+use_max_range = false
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2095299094]
+texture = ExtResource("2_4j4y0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=108190294]
+shape = SubResource("CircleShape2D_o3mhk")
+
+[node name="ShapeCast2D" type="ShapeCast2D" parent="." unique_id=1757938320]

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bwad6pndx2f2n"]
+
+[ext_resource type="Script" uid="uid://drtvvw4rf8jqn" path="res://scripts/EvolutionVisual.gd" id="1_3mue8"]
+[ext_resource type="Texture2D" uid="uid://cru7yv8u534ca" path="res://assets/sprites/nivel_4/LEVEL_4_1.png" id="2_qdqp7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qdqp7"]
+radius = 389.52682
+height = 1437.3005
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h2l1q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qdqp7")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[node name="Evolución_4" type="Node2D" unique_id=1788036564]
+script = ExtResource("1_3mue8")
+body_shape = SubResource("CapsuleShape2D_qdqp7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1268035138]
+position = Vector2(-15, 0)
+sprite_frames = SubResource("SpriteFrames_h2l1q")
+animation = &"idle"
+frame_progress = 0.001395007

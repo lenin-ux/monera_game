@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CharacterDef" format=3 uid="uid://bai6rwvl02a0e"]
+
+[ext_resource type="Script" uid="uid://dwa0hjfb5ek4h" path="res://scripts/resources/CharacterDef.gd" id="1_ppslk"]
+[ext_resource type="PackedScene" uid="uid://diuahouhaj46h" path="res://scenes/evolutions/nivel_1.tscn" id="2_vfvw0"]
+
+[resource]
+script = ExtResource("1_ppslk")
+id = &"nivel_1"
+display_name = "Evolución_1"
+visual_scene = ExtResource("2_vfvw0")
+evolves_to = &"nivel_2"
+movement_speed = 2000.0
+metadata/_custom_type_script = "uid://dwa0hjfb5ek4h"

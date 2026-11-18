@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="WeaponDef" format=3 uid="uid://8glbtrcaieht"]
+
+[ext_resource type="PackedScene" uid="uid://dhtnqwev12kf1" path="res://scenes/guisante.tscn" id="1_8o7q7"]
+[ext_resource type="Script" uid="uid://dc3m41j5a7b4p" path="res://scripts/resources/WeaponDef.gd" id="2_g5nsm"]
+[ext_resource type="PackedScene" uid="uid://dlkl8rf0wfy3g" path="res://scenes/cerbatana.tscn" id="3_eig47"]
+
+[resource]
+script = ExtResource("2_g5nsm")
+id = &"cerbatana"
+display_name = "Cerbatana"
+weapon_scene = ExtResource("3_eig47")
+projectile_scene = ExtResource("1_8o7q7")
+damage = 30
+projectile_speed = 10000.0
+projectile_range = 10000.0

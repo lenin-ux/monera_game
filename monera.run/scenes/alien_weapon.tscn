@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://br52io6ug7vmf"]
+
+[ext_resource type="Script" uid="uid://jvpox5u4g2ij" path="res://scripts/WeaponBase.gd" id="1_5b3gp"]
+[ext_resource type="Texture2D" uid="uid://dnvb6ih3m85qi" path="res://assets/sprites/armas/arma_alienigena.png" id="1_g6n4b"]
+[ext_resource type="Script" uid="uid://cdyv6b6iwp2bu" path="res://scenes/AlienWaveVisual.gd" id="2_ed1xk"]
+
+[node name="AlienWeapon" type="Node2D" unique_id=710272114]
+script = ExtResource("1_5b3gp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1639953003]
+position = Vector2(227, 0)
+texture = ExtResource("1_g6n4b")
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=892174116]
+
+[node name="AlienWaveVisual" type="Node2D" parent="Muzzle" unique_id=362046659]
+position = Vector2(625, -158)
+script = ExtResource("2_ed1xk")
+attack_range = 1800.0
+cone_angle = 90.0
+show_hit_area = false

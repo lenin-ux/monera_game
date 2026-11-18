@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://da55dli1tywcj"]
+
+[ext_resource type="Script" uid="uid://jvpox5u4g2ij" path="res://scripts/WeaponBase.gd" id="1_fipy2"]
+[ext_resource type="Texture2D" uid="uid://blwamfeatuecn" path="res://assets/sprites/Resortera.png" id="2_3aosl"]
+
+[node name="Slingshot" type="Node2D" unique_id=201504721]
+script = ExtResource("1_fipy2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=54682798]
+position = Vector2(215, -56)
+texture = ExtResource("2_3aosl")
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=1155662295]
+position = Vector2(259, -151)

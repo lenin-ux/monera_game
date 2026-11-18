@@ -1,0 +1,472 @@
+[gd_scene format=3 uid="uid://db63aiia8gvcm"]
+
+[ext_resource type="Script" uid="uid://cqpewy1q60pih" path="res://scripts/World.gd" id="1_kqs1s"]
+[ext_resource type="PackedScene" uid="uid://q2wxxer7hy5f" path="res://scenes/Nutrient1.tscn" id="2_1lgw5"]
+[ext_resource type="Script" uid="uid://d4mimxhwsiblt" path="res://scripts/Map.gd" id="2_32lhk"]
+[ext_resource type="FontFile" uid="uid://ugg07fvec585" path="res://fonts/Nice Chalk Demo.ttf" id="3_7g83o"]
+[ext_resource type="PackedScene" uid="uid://b0082dt8v8sj3" path="res://scenes/Nutrient5.tscn" id="3_hlk0d"]
+[ext_resource type="Texture2D" uid="uid://ouw7lsbwsjqu" path="res://assets/sprites/armas/cervatana.png" id="4_pdh0q"]
+[ext_resource type="Texture2D" uid="uid://ctwokxg632mso" path="res://assets/sprites/armas/cervatana_pegajosa.png" id="5_h1bdy"]
+[ext_resource type="Texture2D" uid="uid://dnvb6ih3m85qi" path="res://assets/sprites/armas/arma_alienigena.png" id="6_7c4bj"]
+[ext_resource type="Texture2D" uid="uid://cesiiu5d0wtui" path="res://assets/sprites/armas/pompero.png" id="7_nrtoj"]
+[ext_resource type="Texture2D" uid="uid://bntgkqjfwx3nl" path="res://assets/sprites/armas/escopeta.png" id="8_i4b1j"]
+[ext_resource type="Script" uid="uid://ctfa4670k65x2" path="res://scripts/Leaderboard.gd" id="11_h1bdy"]
+[ext_resource type="Script" uid="uid://b8ugy3gq0vb04" path="res://scripts/KillFeed.gd" id="12_7c4bj"]
+[ext_resource type="Script" uid="uid://cygycab1bxguw" path="res://scripts/PauseMenu.gd" id="13_c0d7e"]
+[ext_resource type="Script" uid="uid://cmppttwyymdld" path="res://scripts/AnimatedMenuButton.gd" id="14_44lqw"]
+[ext_resource type="Texture2D" uid="uid://brkurqin3vl4g" path="res://assets/sprites/Pausa/punto_sonido.png" id="14_o1tcx"]
+[ext_resource type="Texture2D" uid="uid://b2mrp1m4dnhms" path="res://assets/sprites/Pausa/barra_sonido.png" id="15_rpuxp"]
+[ext_resource type="Texture2D" uid="uid://cxx25hjncchg8" path="res://assets/sprites/Pausa/reanudar.png" id="17_rm3lh"]
+[ext_resource type="Script" uid="uid://c5kb2mhi3cou" path="res://scripts/ScoreService.gd" id="20_dwmkc"]
+[ext_resource type="Texture2D" uid="uid://dre5unu5ops1" path="res://assets/sprites/Pausa/volver_al_menu.png" id="20_yncth"]
+[ext_resource type="Texture2D" uid="uid://cnqc1wccdjhr6" path="res://assets/sprites/Pausa/pausa.png" id="21_30fn3"]
+[ext_resource type="Script" uid="uid://bi2xopd7dgf8d" path="res://scripts/WorldAudio.gd" id="21_dgldv"]
+[ext_resource type="AudioStream" uid="uid://rs38qjq3mk8w" path="res://assets/Sonidos/daño.mp3" id="22_4q8dg"]
+[ext_resource type="AudioStream" uid="uid://kroyddthi024" path="res://assets/Musica/musica_fondo.mp3" id="22_uni40"]
+[ext_resource type="AudioStream" uid="uid://ql3hrb8anukr" path="res://assets/Sonidos/lanzar.mp3" id="23_lawxi"]
+[ext_resource type="AudioStream" uid="uid://ci8e4glotmbm" path="res://assets/Sonidos/level_up.mp3" id="24_uni40"]
+[ext_resource type="AudioStream" uid="uid://c8c6t6fwhamnw" path="res://assets/Sonidos/rayo_lazer.mp3" id="25_aqlsr"]
+[ext_resource type="AudioStream" uid="uid://dh3gfdixxfsv3" path="res://assets/Sonidos/Escopeta.mp3" id="25_n2fr6"]
+[ext_resource type="AudioStream" uid="uid://rixlwxyngrw3" path="res://assets/Sonidos/recoger_nutriente.mp3" id="26_n2fr6"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7g83o"]
+load_path = "res://.godot/imported/Fondo.png-1f434fa2f4e0b4cedf8dded89291f3cb.ctex"
+
+[sub_resource type="FontVariation" id="FontVariation_o3mhk"]
+base_font = ExtResource("3_7g83o")
+
+[sub_resource type="FontVariation" id="FontVariation_cfvr4"]
+base_font = ExtResource("3_7g83o")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1lgw5"]
+content_margin_left = 24.0
+content_margin_top = 20.0
+content_margin_right = 24.0
+content_margin_bottom = 20.0
+bg_color = Color(0.09985284, 0.09985284, 0.09985284, 0.8)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.8, 0.8, 0.8, 0.6627451)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 12
+shadow_color = Color(1, 1, 1, 0.05490196)
+shadow_size = 4
+
+[sub_resource type="FontVariation" id="FontVariation_h1bdy"]
+base_font = ExtResource("3_7g83o")
+
+[sub_resource type="FontVariation" id="FontVariation_7c4bj"]
+base_font = ExtResource("3_7g83o")
+
+[sub_resource type="FontVariation" id="FontVariation_nrtoj"]
+base_font = ExtResource("3_7g83o")
+
+[sub_resource type="FontVariation" id="FontVariation_pdh0q"]
+base_font = ExtResource("3_7g83o")
+
+[sub_resource type="FontVariation" id="FontVariation_i4b1j"]
+base_font = ExtResource("3_7g83o")
+
+[sub_resource type="FontVariation" id="FontVariation_c0d7e"]
+base_font = ExtResource("3_7g83o")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_128ka"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_rm3lh")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 3.4
+}, {
+"frames": [],
+"loop": 1,
+"name": &"hover",
+"speed": 3.4
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_44lqw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dwmkc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_30fn3"]
+
+[sub_resource type="FontVariation" id="FontVariation_dwmkc"]
+base_font = ExtResource("3_7g83o")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ngql4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_yncth")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 3.2
+}, {
+"frames": [],
+"loop": 1,
+"name": &"hover",
+"speed": 3.2
+}]
+
+[node name="World" type="Node2D" unique_id=863620659]
+script = ExtResource("1_kqs1s")
+nutrient_one_scene = ExtResource("2_1lgw5")
+nutrient_five_scene = ExtResource("3_hlk0d")
+max_nutrients = 100
+nutrient_spawn_rect = Rect2(0, 0, 15360, 8640)
+icon_cerbatana = ExtResource("4_pdh0q")
+icon_cerbatana_pegajosa = ExtResource("5_h1bdy")
+icon_alienigena = ExtResource("6_7c4bj")
+icon_pompero = ExtResource("7_nrtoj")
+icon_escopeta = ExtResource("8_i4b1j")
+
+[node name="Map" type="Node2D" parent="." unique_id=2111855031]
+z_index = -1
+script = ExtResource("2_32lhk")
+
+[node name="Floor" type="Sprite2D" parent="Map" unique_id=1047545339]
+texture_repeat = 2
+texture = SubResource("CompressedTexture2D_7g83o")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 15360, 8640)
+
+[node name="Players" type="Node2D" parent="." unique_id=911689313]
+z_index = 1
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=296619646]
+spawn_path = NodePath("../Players")
+
+[node name="Projectiles" type="Node2D" parent="." unique_id=835007150]
+
+[node name="ProjectileSpawner" type="MultiplayerSpawner" parent="." unique_id=2116524994]
+spawn_path = NodePath("../Projectiles")
+
+[node name="Nutrients" type="Node2D" parent="." unique_id=468403845]
+
+[node name="NutrientSpawner" type="MultiplayerSpawner" parent="." unique_id=1026188707]
+spawn_path = NodePath("../Nutrients")
+
+[node name="NutrientTimer" type="Timer" parent="." unique_id=1950376855]
+wait_time = 2.0
+autostart = true
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=949606721]
+
+[node name="PointsLabel" type="Label" parent="HUD" unique_id=5781991]
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 330.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0.007843138, 0.23137255, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = SubResource("FontVariation_o3mhk")
+theme_override_font_sizes/font_size = 48
+text = "Puntos: 0"
+
+[node name="EvolutionHint" type="Label" parent="HUD" unique_id=1175873265]
+offset_left = 30.0
+offset_top = 85.0
+offset_right = 480.0
+offset_bottom = 135.0
+theme_override_colors/font_color = Color(2.117753e-06, 0.80836856, 0.38096344, 1)
+theme_override_fonts/font = SubResource("FontVariation_cfvr4")
+theme_override_font_sizes/font_size = 36
+
+[node name="EvolutionOverlay" type="Control" parent="HUD" unique_id=1752861508]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Darken" type="ColorRect" parent="HUD/EvolutionOverlay" unique_id=597323141]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5)
+
+[node name="Center" type="CenterContainer" parent="HUD/EvolutionOverlay" unique_id=1069080814]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogPanel" type="PanelContainer" parent="HUD/EvolutionOverlay/Center" unique_id=23825126]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1lgw5")
+
+[node name="DialogContents" type="VBoxContainer" parent="HUD/EvolutionOverlay/Center/DialogPanel" unique_id=1387651054]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="HUD/EvolutionOverlay/Center/DialogPanel/DialogContents" unique_id=1215133548]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_h1bdy")
+text = "SELECCIONA TU PRÓXIMA ARMA:"
+
+[node name="LevelLabel" type="Label" parent="HUD/EvolutionOverlay/Center/DialogPanel/DialogContents" unique_id=777903649]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_7c4bj")
+
+[node name="Choices" type="HBoxContainer" parent="HUD/EvolutionOverlay/Center/DialogPanel/DialogContents" unique_id=1242177335]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="OptionAContainer" type="VBoxContainer" parent="HUD/EvolutionOverlay/Center/DialogPanel/DialogContents/Choices" unique_id=590218502]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="OptionA" type="TextureButton" parent="HUD/EvolutionOverlay/Center/DialogPanel/DialogContents/Choices/OptionAContainer" unique_id=398252103]
+custom_minimum_size = Vector2(230, 110)
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 4
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="WeaponName" type="Label" parent="HUD/EvolutionOverlay/Center/DialogPanel/DialogContents/Choices/OptionAContainer" unique_id=848037901]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.019607844, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_nrtoj")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Stats" type="Label" parent="HUD/EvolutionOverlay/Center/DialogPanel/DialogContents/Choices/OptionAContainer" unique_id=998153276]
+custom_minimum_size = Vector2(78, 0)
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_pdh0q")
+theme_override_font_sizes/font_size = 15
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="OptionBContainer" type="VBoxContainer" parent="HUD/EvolutionOverlay/Center/DialogPanel/DialogContents/Choices" unique_id=840689085]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="OptionB" type="TextureButton" parent="HUD/EvolutionOverlay/Center/DialogPanel/DialogContents/Choices/OptionBContainer" unique_id=1630022407]
+custom_minimum_size = Vector2(230, 110)
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 4
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="WeaponName" type="Label" parent="HUD/EvolutionOverlay/Center/DialogPanel/DialogContents/Choices/OptionBContainer" unique_id=1836781645]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.019607844, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_nrtoj")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Stats" type="Label" parent="HUD/EvolutionOverlay/Center/DialogPanel/DialogContents/Choices/OptionBContainer" unique_id=1641557587]
+custom_minimum_size = Vector2(78, 0)
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_pdh0q")
+theme_override_font_sizes/font_size = 15
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="CloseButton" type="Button" parent="HUD/EvolutionOverlay/Center/DialogPanel/DialogContents" unique_id=490550153]
+custom_minimum_size = Vector2(150, 36)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = SubResource("FontVariation_i4b1j")
+text = "Cerrar"
+
+[node name="LeaderboardPanel" type="PanelContainer" parent="HUD" unique_id=1079461287]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -3.0
+offset_bottom = 35.0
+grow_horizontal = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1lgw5")
+script = ExtResource("11_h1bdy")
+leaderboard_font = ExtResource("3_7g83o")
+leaderboard_font_size = 24
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/LeaderboardPanel" unique_id=1969492566]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 10
+
+[node name="LeaderboardContent" type="VBoxContainer" parent="HUD/LeaderboardPanel/MarginContainer" unique_id=1470726338]
+layout_mode = 2
+
+[node name="TileLabel" type="Label" parent="HUD/LeaderboardPanel/MarginContainer/LeaderboardContent" unique_id=1482157837]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_c0d7e")
+theme_override_font_sizes/font_size = 32
+text = "🏆 CLASIFICACIÓN   "
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="HUD/LeaderboardPanel/MarginContainer/LeaderboardContent" unique_id=956584802]
+layout_mode = 2
+
+[node name="LeaderboardList" type="VBoxContainer" parent="HUD/LeaderboardPanel/MarginContainer/LeaderboardContent" unique_id=593332194]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="RefreshTimer" type="Timer" parent="HUD/LeaderboardPanel" unique_id=2018060113]
+wait_time = 0.5
+autostart = true
+
+[node name="KillFeed" type="VBoxContainer" parent="HUD" unique_id=1117826789]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("12_7c4bj")
+visible_seconds = 4.0
+max_messages = 8
+feed_font = ExtResource("3_7g83o")
+feed_font_size = 24
+custom_background_color = Color(0.09803922, 0.09803922, 0.09803922, 0.8)
+
+[node name="PauseMenu" type="Control" parent="HUD" unique_id=2102277199]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("13_c0d7e")
+
+[node name="DimBackground" type="ColorRect" parent="HUD/PauseMenu" unique_id=983239883]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 0.5)
+
+[node name="CenterContainer" type="CenterContainer" parent="HUD/PauseMenu" unique_id=339340302]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 319.0
+offset_bottom = -281.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuContent" type="VBoxContainer" parent="HUD/PauseMenu/CenterContainer" unique_id=154358239]
+custom_minimum_size = Vector2(1054.57, 400)
+layout_mode = 2
+theme_override_constants/separation = 57
+alignment = 1
+
+[node name="PausaLabel" type="Sprite2D" parent="HUD/PauseMenu/CenterContainer/MenuContent" unique_id=705338000]
+position = Vector2(518, -50)
+texture = ExtResource("21_30fn3")
+
+[node name="ResumeButton" type="TextureButton" parent="HUD/PauseMenu/CenterContainer/MenuContent" unique_id=1596350957]
+texture_filter = 1
+custom_minimum_size = Vector2(502, 105)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("14_44lqw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HUD/PauseMenu/CenterContainer/MenuContent/ResumeButton" unique_id=43825746]
+texture_filter = 1
+position = Vector2(253, 51)
+sprite_frames = SubResource("SpriteFrames_128ka")
+autoplay = "default"
+
+[node name="VolumeRow" type="HBoxContainer" parent="HUD/PauseMenu/CenterContainer/MenuContent" unique_id=1872565267]
+layout_mode = 2
+alignment = 1
+
+[node name="SoundButton" type="TextureButton" parent="HUD/PauseMenu/CenterContainer/MenuContent/VolumeRow" unique_id=1699401691]
+layout_mode = 2
+
+[node name="VolumeArea" type="Control" parent="HUD/PauseMenu/CenterContainer/MenuContent/VolumeRow" unique_id=112532515]
+custom_minimum_size = Vector2(320, 40)
+layout_mode = 2
+
+[node name="VolumeBar" type="TextureRect" parent="HUD/PauseMenu/CenterContainer/MenuContent/VolumeRow/VolumeArea" unique_id=2006797904]
+layout_mode = 0
+offset_left = -272.0
+offset_top = 4.0
+offset_right = 586.0
+offset_bottom = 55.0
+mouse_filter = 2
+texture = ExtResource("15_rpuxp")
+expand_mode = 1
+
+[node name="VolumeSlider" type="HSlider" parent="HUD/PauseMenu/CenterContainer/MenuContent/VolumeRow/VolumeArea" unique_id=1854381308]
+layout_mode = 0
+offset_left = -274.0
+offset_top = -16.0
+offset_right = 587.0
+offset_bottom = 75.0
+theme_override_icons/grabber = ExtResource("14_o1tcx")
+theme_override_icons/grabber_highlight = ExtResource("14_o1tcx")
+theme_override_icons/grabber_disabled = ExtResource("14_o1tcx")
+theme_override_icons/tick = ExtResource("14_o1tcx")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_44lqw")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_dwmkc")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_30fn3")
+
+[node name="VolumeLabel" type="Label" parent="HUD/PauseMenu/CenterContainer/MenuContent/VolumeRow/VolumeArea" unique_id=891758574]
+layout_mode = 0
+offset_left = 605.0
+offset_top = 19.0
+offset_right = 606.0
+offset_bottom = 42.0
+theme_override_fonts/font = SubResource("FontVariation_dwmkc")
+theme_override_font_sizes/font_size = 24
+
+[node name="MenuButton" type="TextureButton" parent="HUD/PauseMenu/CenterContainer/MenuContent" unique_id=2098734192]
+texture_filter = 1
+custom_minimum_size = Vector2(936, 102)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("14_44lqw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HUD/PauseMenu/CenterContainer/MenuContent/MenuButton" unique_id=1409848430]
+texture_filter = 1
+position = Vector2(467, 49)
+sprite_frames = SubResource("SpriteFrames_ngql4")
+autoplay = "default"
+
+[node name="ScoreService" type="Node" parent="." unique_id=1460287515]
+script = ExtResource("20_dwmkc")
+
+[node name="WorldAudio" type="Node" parent="." unique_id=80343460]
+script = ExtResource("21_dgldv")
+musica_fondo = ExtResource("22_uni40")
+musica_volumen_db = -20.0
+sonido_danio = ExtResource("22_4q8dg")
+sonido_proyectil = ExtResource("23_lawxi")
+sonido_escopeta = ExtResource("25_n2fr6")
+sonido_level_up = ExtResource("24_uni40")
+sonido_lazer = ExtResource("25_aqlsr")
+sonido_nutriente = ExtResource("26_n2fr6")

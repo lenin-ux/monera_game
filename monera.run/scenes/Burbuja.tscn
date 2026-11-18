@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://7e8wk3a6807p"]
+
+[ext_resource type="Texture2D" uid="uid://bqai1w4uwjfnj" path="res://assets/sprites/armas/burbuja.png" id="1_b5ybc"]
+[ext_resource type="Script" uid="uid://bo0mycoq8o0lg" path="res://scripts/BubbleProjectile.gd" id="1_u2n1p"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dy336"]
+radius = 196.7257
+
+[node name="Burbuja" type="Area2D" unique_id=1761506435]
+collision_layer = 2
+script = ExtResource("1_u2n1p")
+explosion_radius = 800.0
+lifetime = 3.0
+visual_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1827982493]
+texture = ExtResource("1_b5ybc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=44806989]
+shape = SubResource("CircleShape2D_dy336")
+
+[node name="ShapeCast2D" type="ShapeCast2D" parent="." unique_id=1866094441]
+target_position = Vector2(0, 0)

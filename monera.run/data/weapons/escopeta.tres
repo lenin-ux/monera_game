@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="WeaponDef" format=3 uid="uid://dtv24tn1ryxe8"]
+
+[ext_resource type="PackedScene" uid="uid://njbp6y6dpw3i" path="res://scenes/BalaEscopeta.tscn" id="1_fuv1y"]
+[ext_resource type="Script" uid="uid://dc3m41j5a7b4p" path="res://scripts/resources/WeaponDef.gd" id="2_70byx"]
+[ext_resource type="PackedScene" uid="uid://bse38gup5qp2l" path="res://scenes/Escopeta.tscn" id="3_70byx"]
+
+[resource]
+script = ExtResource("2_70byx")
+id = &"escopeta"
+display_name = "Escopeta"
+weapon_scene = ExtResource("3_70byx")
+projectile_scene = ExtResource("1_fuv1y")
+damage = 25
+fire_interval = 0.75
+projectile_speed = 10000.0
+projectile_range = 10000.0
+metadata/_custom_type_script = "uid://dc3m41j5a7b4p"

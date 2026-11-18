@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CharacterDef" format=3 uid="uid://tst580x7arvs"]
+
+[ext_resource type="Script" uid="uid://dwa0hjfb5ek4h" path="res://scripts/resources/CharacterDef.gd" id="1_mpjpq"]
+[ext_resource type="PackedScene" uid="uid://bepulseamdj26" path="res://scenes/evolutions/nivel_3.tscn" id="2_mpjpq"]
+[ext_resource type="Script" uid="uid://dc3m41j5a7b4p" path="res://scripts/resources/WeaponDef.gd" id="3_8y0gg"]
+
+[resource]
+script = ExtResource("1_mpjpq")
+id = &"nivel_3"
+display_name = "Evolución_3"
+visual_scene = ExtResource("2_mpjpq")
+evolves_to = &"nivel_4"
+max_health = 170
+movement_speed = 1600.0
+metadata/_custom_type_script = "uid://dwa0hjfb5ek4h"

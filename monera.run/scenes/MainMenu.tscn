@@ -1,0 +1,430 @@
+[gd_scene format=3 uid="uid://brd021fml2g5g"]
+
+[ext_resource type="Texture2D" uid="uid://c73qj5pck4hyk" path="res://assets/sprites/mapa/Fondo.png" id="1_0ykhv"]
+[ext_resource type="Script" uid="uid://bww73867f3xb8" path="res://scenes/MainMenu.gd" id="1_l72w3"]
+[ext_resource type="Script" uid="uid://cko4vn47ckext" path="res://scenes/ScrollingBackground.gd" id="2_2wh52"]
+[ext_resource type="Texture2D" uid="uid://bbwhligrrp3b8" path="res://assets/sprites/menu/Titulo.png" id="4_826wr"]
+[ext_resource type="Texture2D" uid="uid://bqpxbossnebsw" path="res://assets/sprites/menu/Titulo2.png" id="5_mipys"]
+[ext_resource type="Texture2D" uid="uid://cscmqtr0vdega" path="res://assets/sprites/menu/Titulo3.png" id="6_8a8k8"]
+[ext_resource type="Texture2D" uid="uid://ctmqwhxy1drc6" path="res://assets/sprites/menu/jugar1.png" id="7_5faoh"]
+[ext_resource type="Script" uid="uid://cmppttwyymdld" path="res://scripts/AnimatedMenuButton.gd" id="7_ptake"]
+[ext_resource type="Texture2D" uid="uid://dfhucifsi4k1o" path="res://assets/sprites/menu/sonido1.png" id="8_5faoh"]
+[ext_resource type="Texture2D" uid="uid://hrqid4bn0umx" path="res://assets/sprites/menu/jugar2.png" id="8_ptake"]
+[ext_resource type="FontFile" uid="uid://ugg07fvec585" path="res://fonts/Nice Chalk Demo.ttf" id="9_8a8k8"]
+[ext_resource type="Texture2D" uid="uid://cmaum4u5y68wk" path="res://assets/sprites/menu/jugar3.png" id="9_hubol"]
+[ext_resource type="Texture2D" uid="uid://cwt3nwj43g2l4" path="res://assets/sprites/menu/sonido2.png" id="9_ptake"]
+[ext_resource type="AudioStream" uid="uid://bn2j60ykbotdf" path="res://assets/Musica/Introducción.mp3" id="10_bky6r"]
+[ext_resource type="Texture2D" uid="uid://bvjh228l51b80" path="res://assets/sprites/menu/sonido3.png" id="10_hubol"]
+[ext_resource type="AudioStream" uid="uid://ygp78std0y4y" path="res://assets/Musica/Bucle.mp3" id="11_l4mxc"]
+[ext_resource type="Texture2D" uid="uid://x08k78ly7v47" path="res://assets/sprites/menu/jugar1_hover.png" id="11_yovvs"]
+[ext_resource type="Texture2D" uid="uid://c8w5yvlcysjqc" path="res://assets/sprites/menu/jugar2_hover.png" id="12_2axsc"]
+[ext_resource type="AudioStream" uid="uid://bwa76qs3dwtjy" path="res://assets/Musica/Start.mp3" id="12_5faoh"]
+[ext_resource type="Texture2D" uid="uid://ur0gxfy6taec" path="res://assets/sprites/menu/jugar3_hover.png" id="13_wrgne"]
+[ext_resource type="Texture2D" uid="uid://c5xcx6341puvk" path="res://assets/sprites/menu/sonido1_hover.png" id="17_hm0al"]
+[ext_resource type="Texture2D" uid="uid://cfmt86gx0gmmw" path="res://assets/sprites/menu/sonido2_hover.png" id="18_i7r3k"]
+[ext_resource type="Texture2D" uid="uid://boi7j5mloyjc" path="res://assets/sprites/menu/sonido3_hover.png" id="19_os5dr"]
+[ext_resource type="Texture2D" uid="uid://b2mrp1m4dnhms" path="res://assets/sprites/Pausa/barra_sonido.png" id="20_hm0al"]
+[ext_resource type="Script" uid="uid://c8neb6u7jcnuc" path="res://scripts/MenuVolumeRow.gd" id="20_i7r3k"]
+[ext_resource type="Texture2D" uid="uid://brkurqin3vl4g" path="res://assets/sprites/Pausa/punto_sonido.png" id="21_i7r3k"]
+[ext_resource type="Script" uid="uid://8xqggvswbhrn" path="res://scripts/HighScoresPanel.gd" id="24_2axsc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o3mhk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_826wr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mipys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8a8k8")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8vx4p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_5faoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ptake")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hubol")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 3.4
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_yovvs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2axsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_wrgne")
+}],
+"loop": 1,
+"name": &"hover",
+"speed": 3.4
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cfvr4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_5faoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ptake")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hubol")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 3.2
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_hm0al")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_i7r3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_os5dr")
+}],
+"loop": 1,
+"name": &"hover",
+"speed": 3.2
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_os5dr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_duata"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lw0hr"]
+
+[sub_resource type="FontVariation" id="FontVariation_gnvml"]
+base_font = ExtResource("9_8a8k8")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1f8dh"]
+content_margin_left = 25.0
+content_margin_top = 25.0
+content_margin_right = 25.0
+content_margin_bottom = 25.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.6)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.8, 0.8, 0.8, 0.6627451)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 12
+shadow_color = Color(1, 1, 1, 0.05490196)
+shadow_size = 4
+
+[sub_resource type="FontVariation" id="FontVariation_3li8b"]
+base_font = ExtResource("9_8a8k8")
+
+[sub_resource type="FontVariation" id="FontVariation_mdl7e"]
+base_font = ExtResource("9_8a8k8")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l4mxc"]
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.6)
+border_width_bottom = 5
+corner_detail = 1
+
+[sub_resource type="FontVariation" id="FontVariation_qu4a1"]
+base_font = ExtResource("9_8a8k8")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yovvs"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hm0al"]
+bg_color = Color(0.6, 0.6, 0.6, 0.6)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 12
+
+[sub_resource type="FontVariation" id="FontVariation_cw2d6"]
+base_font = ExtResource("9_8a8k8")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ptake"]
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.6)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wrgne"]
+content_margin_left = 24.0
+content_margin_top = 20.0
+content_margin_right = 24.0
+content_margin_bottom = 20.0
+bg_color = Color(0.09985284, 0.09985284, 0.09985284, 0.8)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.8, 0.8, 0.8, 0.6627451)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 12
+shadow_color = Color(1, 1, 1, 0.05490196)
+shadow_size = 4
+
+[node name="MainMenu" type="Control" unique_id=42911162]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l72w3")
+
+[node name="Backround" type="Sprite2D" parent="." unique_id=162332463]
+texture_repeat = 2
+texture = ExtResource("1_0ykhv")
+centered = false
+region_enabled = true
+script = ExtResource("2_2wh52")
+pattern_scale = 0.25
+
+[node name="Title" type="AnimatedSprite2D" parent="." unique_id=1835566545]
+texture_filter = 1
+position = Vector2(965.79535, 359.50003)
+scale = Vector2(1.006319, 1.0063189)
+sprite_frames = SubResource("SpriteFrames_o3mhk")
+autoplay = "default"
+frame_progress = 0.59837943
+
+[node name="MainContent" type="CenterContainer" parent="." unique_id=897373734]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 449.0
+offset_bottom = -116.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuButtons" type="VBoxContainer" parent="MainContent" unique_id=268394265]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="PlayButton" type="TextureButton" parent="MainContent/MenuButtons" unique_id=1489901563]
+texture_filter = 1
+custom_minimum_size = Vector2(500, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("7_ptake")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MainContent/MenuButtons/PlayButton" unique_id=1852727942]
+texture_filter = 1
+position = Vector2(277, 125)
+sprite_frames = SubResource("SpriteFrames_8vx4p")
+autoplay = "default"
+
+[node name="SoundButton" type="TextureButton" parent="MainContent/MenuButtons" unique_id=2120615100]
+texture_filter = 1
+custom_minimum_size = Vector2(500, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("7_ptake")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MainContent/MenuButtons/SoundButton" unique_id=782928761]
+texture_filter = 1
+position = Vector2(277, 125)
+sprite_frames = SubResource("SpriteFrames_cfvr4")
+autoplay = "default"
+
+[node name="VolumeRow" type="HBoxContainer" parent="MainContent/MenuButtons/SoundButton" unique_id=233886366]
+layout_mode = 0
+offset_left = -132.0
+offset_top = 235.0
+offset_right = 806.0
+offset_bottom = 292.0
+theme_override_constants/separation = 15
+alignment = 2
+script = ExtResource("20_i7r3k")
+
+[node name="VolumeArea" type="Control" parent="MainContent/MenuButtons/SoundButton/VolumeRow" unique_id=294506837]
+custom_minimum_size = Vector2(862.61, 56.13)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="VolumeBar" type="TextureRect" parent="MainContent/MenuButtons/SoundButton/VolumeRow/VolumeArea" unique_id=1429270805]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 860.0
+offset_bottom = 55.0
+mouse_filter = 2
+texture = ExtResource("20_hm0al")
+expand_mode = 1
+
+[node name="VolumeSlider" type="HSlider" parent="MainContent/MenuButtons/SoundButton/VolumeRow/VolumeArea" unique_id=388717408]
+layout_mode = 0
+offset_top = -16.0
+offset_right = 861.0
+offset_bottom = 75.0
+theme_override_icons/grabber = ExtResource("21_i7r3k")
+theme_override_icons/grabber_highlight = ExtResource("21_i7r3k")
+theme_override_icons/grabber_disabled = ExtResource("21_i7r3k")
+theme_override_icons/tick = ExtResource("21_i7r3k")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_os5dr")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_duata")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_lw0hr")
+
+[node name="VolumeLabel" type="Label" parent="MainContent/MenuButtons/SoundButton/VolumeRow" unique_id=1289907220]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_color = Color(0, 0.015686275, 0.7294118, 1)
+theme_override_fonts/font = SubResource("FontVariation_gnvml")
+theme_override_font_sizes/font_size = 24
+
+[node name="NameOverlay" type="Control" parent="." unique_id=551592440]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 1.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Darken" type="ColorRect" parent="NameOverlay" unique_id=778303633]
+modulate = Color(0.9612289, 0.961229, 0.9612289, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.27058825)
+
+[node name="DialogCenter" type="CenterContainer" parent="NameOverlay" unique_id=698687775]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogPanel" type="PanelContainer" parent="NameOverlay/DialogCenter" unique_id=234011607]
+custom_minimum_size = Vector2(478, 299.035)
+custom_maximum_size = Vector2(-1, 500)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1f8dh")
+
+[node name="DialogContents" type="VBoxContainer" parent="NameOverlay/DialogCenter/DialogPanel" unique_id=153103401]
+propagate_maximum_size = false
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="Prompt" type="Label" parent="NameOverlay/DialogCenter/DialogPanel/DialogContents" unique_id=1773109616]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_3li8b")
+theme_override_font_sizes/font_size = 36
+text = " Ingresa tu nombre de usuario:"
+horizontal_alignment = 1
+
+[node name="NameInput" type="LineEdit" parent="NameOverlay/DialogCenter/DialogPanel/DialogContents" unique_id=1060869624]
+custom_minimum_size = Vector2(450, 0)
+custom_maximum_size = Vector2(450, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_uneditable_color = Color(0.88300985, 0.924095, 0.060991205, 0.5019608)
+theme_override_fonts/font = SubResource("FontVariation_mdl7e")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_l4mxc")
+placeholder_text = "Ej. Sierra117"
+alignment = 1
+max_length = 16
+
+[node name="EnterButton" type="Button" parent="NameOverlay/DialogCenter/DialogPanel/DialogContents" unique_id=190135560]
+custom_minimum_size = Vector2(450, 0)
+custom_maximum_size = Vector2(450, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = SubResource("FontVariation_qu4a1")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_yovvs")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hm0al")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_yovvs")
+text = "Entrar"
+
+[node name="BackButton" type="Button" parent="NameOverlay/DialogCenter/DialogPanel/DialogContents" unique_id=910355511]
+custom_minimum_size = Vector2(450, 0)
+custom_maximum_size = Vector2(450, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = SubResource("FontVariation_cw2d6")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_ptake")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hm0al")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ptake")
+text = "Cancelar"
+
+[node name="IntroMusic" type="AudioStreamPlayer" parent="." unique_id=537805913]
+stream = ExtResource("10_bky6r")
+volume_db = -8.0
+
+[node name="LoopMusic" type="AudioStreamPlayer" parent="." unique_id=759461502]
+stream = ExtResource("11_l4mxc")
+volume_db = -8.0
+
+[node name="EnterSound" type="AudioStreamPlayer" parent="." unique_id=1249195539]
+stream = ExtResource("12_5faoh")
+volume_db = -8.0
+
+[node name="HighScoresPanel" type="PanelContainer" parent="." unique_id=926218448]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.731
+anchor_top = 0.625
+anchor_right = 0.97800004
+anchor_bottom = 0.9620001
+offset_left = 10.47998
+offset_right = -415.76013
+offset_bottom = -323.96008
+theme_override_styles/panel = SubResource("StyleBoxFlat_wrgne")
+script = ExtResource("24_2axsc")
+ranking_font = ExtResource("9_8a8k8")

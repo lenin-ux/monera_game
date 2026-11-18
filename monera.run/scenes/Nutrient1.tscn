@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://q2wxxer7hy5f"]
+
+[ext_resource type="Texture2D" uid="uid://byvxssx54layo" path="res://assets/sprites/Nutriente1.png" id="1_cmd3v"]
+[ext_resource type="Script" uid="uid://ccjyp3mwyiic0" path="res://scripts/Nutrient.gd" id="1_gdmkn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oiu0i"]
+radius = 63.15061
+
+[node name="Nutrient1" type="Area2D" unique_id=242071983]
+collision_layer = 0
+script = ExtResource("1_gdmkn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1227035991]
+texture = ExtResource("1_cmd3v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1337124225]
+shape = SubResource("CircleShape2D_oiu0i")

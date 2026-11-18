@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="WeaponDef" format=3 uid="uid://cypsksyah6bli"]
+
+[ext_resource type="PackedScene" uid="uid://bfxluq2ajq4uh" path="res://scenes/cubo_pegajoso.tscn" id="1_jed3b"]
+[ext_resource type="Script" uid="uid://dc3m41j5a7b4p" path="res://scripts/resources/WeaponDef.gd" id="1_qopxw"]
+[ext_resource type="PackedScene" uid="uid://b3go8pkdhaare" path="res://scenes/cerbatana_pegajosa.tscn" id="2_jed3b"]
+
+[resource]
+script = ExtResource("1_qopxw")
+id = &"cerbatana_pegajosa"
+display_name = "Cerbatana Pegajosa"
+weapon_scene = ExtResource("2_jed3b")
+projectile_scene = ExtResource("1_jed3b")
+damage = 25
+fire_interval = 0.75
+projectile_speed = 7500.0
+projectile_range = 10000.0
+slow_fraction = 0.5
+slow_duration = 2.0

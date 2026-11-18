@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://d1h50656tgko"]
+
+[ext_resource type="Script" uid="uid://drtvvw4rf8jqn" path="res://scripts/EvolutionVisual.gd" id="1_ikaw5"]
+[ext_resource type="Texture2D" uid="uid://bc6xjl1fy3q3h" path="res://assets/sprites/nivel_2/LEVEL_2_1.png" id="2_qervb"]
+[ext_resource type="Texture2D" uid="uid://duhlo55tyryb4" path="res://assets/sprites/nivel_2/LEVEL_2_2.png" id="3_ikaw5"]
+[ext_resource type="Texture2D" uid="uid://b41uyt71w0ptg" path="res://assets/sprites/nivel_2/LEVEL_2_3.png" id="4_slvph"]
+[ext_resource type="Texture2D" uid="uid://duyviflm0sesk" path="res://assets/sprites/nivel_2/LEVEL_2_4.png" id="5_7a7gj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o3mhk"]
+radius = 265.0
+height = 1094.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h2l1q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qervb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ikaw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_slvph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7a7gj")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[node name="Evolución_2" type="Node2D" unique_id=1788036564]
+script = ExtResource("1_ikaw5")
+body_shape = SubResource("CapsuleShape2D_o3mhk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1268035138]
+sprite_frames = SubResource("SpriteFrames_h2l1q")
+animation = &"idle"
+frame = 2
+frame_progress = 0.610645

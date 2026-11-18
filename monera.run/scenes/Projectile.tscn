@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dl082ix82r543"]
+
+[ext_resource type="Script" uid="uid://dfgnhack0315d" path="res://scripts/Projectile.gd" id="1_vihyi"]
+[ext_resource type="Texture2D" uid="uid://bj6x3i8ex56lj" path="res://assets/sprites/Piedra.png" id="2_kdm4f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o3mhk"]
+radius = 99.50377
+
+[node name="Projectile" type="Area2D" unique_id=2114710166]
+collision_layer = 2
+script = ExtResource("1_vihyi")
+use_lifetime = false
+use_max_range = false
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2095299094]
+texture = ExtResource("2_kdm4f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=108190294]
+shape = SubResource("CircleShape2D_o3mhk")
+
+[node name="ShapeCast2D" type="ShapeCast2D" parent="." unique_id=1757938320]

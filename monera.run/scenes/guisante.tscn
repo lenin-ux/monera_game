@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dhtnqwev12kf1"]
+
+[ext_resource type="Script" uid="uid://dfgnhack0315d" path="res://scripts/Projectile.gd" id="1_wea52"]
+[ext_resource type="Texture2D" uid="uid://cnt0778im3cho" path="res://assets/sprites/armas/guisante.png" id="2_38smo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dy336"]
+radius = 111.07205
+
+[node name="Guisante" type="Area2D" unique_id=1761506435]
+script = ExtResource("1_wea52")
+use_lifetime = false
+use_max_range = false
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1827982493]
+texture = ExtResource("2_38smo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=44806989]
+shape = SubResource("CircleShape2D_dy336")
+
+[node name="ShapeCast2D" type="ShapeCast2D" parent="." unique_id=1866094441]

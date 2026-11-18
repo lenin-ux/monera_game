@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CharacterDef" format=3 uid="uid://bjo7l44a8x837"]
+
+[ext_resource type="Script" uid="uid://dwa0hjfb5ek4h" path="res://scripts/resources/CharacterDef.gd" id="1_7n21f"]
+[ext_resource type="PackedScene" uid="uid://bwad6pndx2f2n" path="res://scenes/evolutions/nivel_4.tscn" id="2_7n21f"]
+
+[resource]
+script = ExtResource("1_7n21f")
+id = &"nivel_4"
+display_name = "Evolución_4"
+visual_scene = ExtResource("2_7n21f")
+evolves_to = &"nivel_1"
+max_health = 220
+movement_speed = 1500.0
+metadata/_custom_type_script = "uid://dwa0hjfb5ek4h"
